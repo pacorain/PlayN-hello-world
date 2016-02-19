@@ -1,4 +1,4 @@
-<module rename-to='hello-world-playn'>
+<module rename-to='helloworldplayn'>
     <inherits name='playn.Scene'/>
     <inherits name='PlayNGameAssets'/>
 
