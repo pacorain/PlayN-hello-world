@@ -11,7 +11,7 @@ import react.Value;
 
 public class PlayNGame extends SceneGame {
 
-    private static final int BOARD_SIZE = 8;
+    public static final int BOARD_SIZE = 8;
     public final RMap<Coordinate, Piece> board = RMap.create();
     public final Value<Piece> turn = Value.create(null);
 
