@@ -1,7 +1,8 @@
 language: java
 env:
   global:
-  - GH_REF = github.com/zbruh/PlayN-hello-world.git
+  - GH_REF = github.com/zbruh/PlayN-hello-world
+  - secure: "UtILh2lYW66XrEQ2qY1w2IgQSdBzb/ddBxU4N3BzAFZcv8QrJ+uo14O8cI7ztgegH0fgbioYmsSBSqyrJT/rT4uYwDZBN5P9gfKbiMWGwzUNxQcj3udWENKDeN00iZloUczWeiXn4GjDSVOanTbGagB6AOTSTRNDEZdtILBze59UEj1DZYGuxfdhnHP67+lC7HFPGK9jWRw35UqgZZrCwl1jgnpAvSpzxIer0td+VAannUVme+RG8RDz62rSb0UViS/jYnIiQ80kv3/aWIEZfFklZ8xowf70JfRuNJLsjRbBzeW2fRXEs7G0k4E0f5DKhkBveeynS6Idc1W83/r7QbaU3t/lC98EvjtPrWw94h5CtuHCfZjImOjqacd4qS0YWSC4jKaau+TfUNM76at7We6vJkjjyvozoyLnEK3IstSKEIoJQX9qr879pVf8P9Eec0HGzDIUzlvWOGK1/cfa/vNPgU/Vh1fj2cU4isiHjKXCPnOzVTgLhc/GBadj49FuP7Hg26a+wgSZwDDu48aAqnTgC9GO+9wGShOmGY1yEHsRgT5Hx483FvlyRjnxLgm0OILudD58APynEko5NlizYikwbGtV9rSlp2AydFoLR7KpW3ATe2Ht62wODnnj6To31w3OlenV6Q22Umk6Zqv2wKSn2oEzROcVgPw875OSvWw="
 script:
 - mvn -Phtml clean package
 - if [ "$TRAVIS_BRANCH" == "master" ]; then bash ./deploy.sh; fi

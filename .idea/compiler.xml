@@ -42,9 +42,17 @@
         <processorPath useClasspath="true" />
         <module name="hello-world-playn-html" />
       </profile>
+      <profile default="false" name="Annotation profile for hello-world-playn-android" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="hello-world-playn-android" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hello-world-playn" target="1.5" />
+      <module name="hello-world-playn-android" target="1.7" />
       <module name="hello-world-playn-assets" target="1.7" />
       <module name="hello-world-playn-core" target="1.7" />
       <module name="hello-world-playn-html" target="1.7" />
