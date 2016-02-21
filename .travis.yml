@@ -1,7 +1,7 @@
 language: java
 env:
   global:
-  - GH_HOST = github.com/zbruh/playn-hello-world
+  - GH_HOST: github.com/zbruh/playn-hello-world
   - secure: "PPY1Gvlmj0oLpU+jLWcTo9QIv3pw4tUj/lD6vzsP7HUKmtOWMj/ULHS8iwIYN46a8pf2id76JN+fMZoPIRz142j91WQGRgYpIddmjZ/n5HmODh78ZOO/tDbXblMrhwViOIjMc660PayuHewhmKfqx4wxcau+tSBg9TxeNX7X7k4119EpQRcYtp5iQyBCZKS0ytF+9MWZQr/4qVO2FD9TECx98wkicYd9PCmgQJ0FD5rvJGgWC1gD1oHqU8w3CoN2TkzPIpSkipOBIQYLESMv/dAdH5P2zzQpBlIh09HFiyvQ1DfH8TmCsJdKBDhpqL63cFxulypN/lwELgy5IMMwrP6gpdkWzjooD/S+hnAHcVRkO5V+It5kYUMYJkAToBoUfzlS7fp8WnMyB1fmmFWD+9B/H+eUKMhJeU7MViMsM4s8j4M75z1s7AnjMq0ikZfKCfiEbBcGSAblpkWRHIrE8NPyf6tLZ0YS4HcJcFupE09zGHxKSFNhf+EMqzp1bA25BEtDcEYg6eYOQjXCV7Cgj8iygsaXGHWNU/pZMkjnA7Z0nu1GBKVVTkuQ2j1V45N90Nx4YkQwAsHPR/BO2ReA2nZWdkp8XMAmqSFCqf4zTaWHhN0rxMNZS05+41LTbwEsGyVXSJGj0Xrs1awuVXE14tV2/jOvZKg6sPySYgu56Jg="
 script:
 - mvn -Phtml clean package
