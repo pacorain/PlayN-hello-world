@@ -4,4 +4,4 @@ script:
 - if [ "$TRAVIS_BRANCH" == "master" ]; then bash ./deploy.sh; fi
 env:
   global:
-  - GH_REF = github.com/zbruh/PlayN-hello-world
+  - GH_REF = github.com/zbruh/PlayN-hello-world.git
