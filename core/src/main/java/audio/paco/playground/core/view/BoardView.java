@@ -29,6 +29,10 @@ public class BoardView extends Layer {
         return cellSize * PlayNGame.BOARD_SIZE + LINE_WIDTH;
     }
 
+    public float cellLocation(int cellCoordinate) {
+        return (cellCoordinate * cellSize) + (cellSize / 2) + 1;
+    }
+
     @Override
     protected void paintImpl(Surface surface) {
         surface.setFillColor(LINE_COLOR);

@@ -1,8 +1,13 @@
 package audio.paco.playground.core.model;
 
-/**
- * Created by ajdearmond on 2/16/2016.
- */
 public enum Piece {
-    BLACK, WHITE
+    BLACK(0xFF000000, 0xFFFFFFFF), WHITE(0xFFFFFFFF, 0xFF000000);
+
+    public final int fillColor;
+    public final int strokeColor;
+
+    Piece(int fillColor, int strokeColor) {
+        this.fillColor = fillColor;
+        this.strokeColor = strokeColor;
+    }
 }
