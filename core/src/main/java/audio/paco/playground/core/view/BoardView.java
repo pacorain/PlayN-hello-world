@@ -3,18 +3,15 @@ package audio.paco.playground.core.view;
 import audio.paco.playground.core.PlayNGame;
 import playn.core.Surface;
 import playn.scene.Layer;
-import pythagoras.f.IDimension;
 
 public class BoardView extends Layer {
 
     private static final int LINE_WIDTH = 2;
     private static final int LINE_COLOR = 0xFF000000;
-    private final PlayNGame game;
     public final float cellSize;
 
-    public BoardView(PlayNGame game, IDimension viewSize) {
-        this.game = game;
-        float maxBoardSize = Math.min(viewSize.width(), viewSize.height()) - 20.0f;
+    public BoardView(PlayNGame game) {
+        float maxBoardSize = Math.min(game.size.width(), game.size.height()) - 20.0f;
         cellSize = (float) Math.floor(maxBoardSize / PlayNGame.BOARD_SIZE);
     }
 
@@ -40,15 +37,15 @@ public class BoardView extends Layer {
     }
 
     private void drawVerticalGridLines(Surface surface) {
-        for (int xx = 0; xx <= PlayNGame.BOARD_SIZE; xx++) {
-            float xpos = xx * cellSize + 1;
+        for (int cellX = 0; cellX <= PlayNGame.BOARD_SIZE; cellX++) {
+            float xpos = cellX * cellSize + 1;
             surface.drawLine(xpos, 0, xpos, height(), LINE_WIDTH);
         }
     }
 
     private void drawHorizontalGridLines(Surface surface) {
-        for (int yy = 0; yy <= PlayNGame.BOARD_SIZE; yy++) {
-            float ypos = yy * cellSize + 1;
+        for (int cellY = 0; cellY <= PlayNGame.BOARD_SIZE; cellY++) {
+            float ypos = cellY * cellSize + 1;
             surface.drawLine(0, ypos, width(), ypos, LINE_WIDTH);
         }
     }
