@@ -1,7 +1,7 @@
 <module rename-to='helloworldplayn'>
     <inherits name='playn.Scene'/>
     <inherits name='PlayNGameAssets'/>
-    <inherits name='com.google.common.base.Preconditions'/>
+    <inherits name='com.google.common.base.Base'/>
 
     <source path='core'/>
     <source path='html'/>
