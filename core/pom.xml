@@ -21,8 +21,8 @@
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>18.0</version>
+            <artifactId>guava-gwt</artifactId>
+            <version>19.0</version>
         </dependency>
     </dependencies>
 
