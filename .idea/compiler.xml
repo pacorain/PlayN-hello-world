@@ -35,11 +35,19 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
       </profile>
+      <profile default="false" name="Annotation profile for hello-world-playn-html" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="hello-world-playn-html" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="hello-world-playn" target="1.5" />
       <module name="hello-world-playn-assets" target="1.7" />
       <module name="hello-world-playn-core" target="1.7" />
+      <module name="hello-world-playn-html" target="1.7" />
       <module name="hello-world-playn-java" target="1.7" />
     </bytecodeTargetLevel>
   </component>

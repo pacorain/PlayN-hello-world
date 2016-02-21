@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/hello-world-playn.iml" filepath="$PROJECT_DIR$/hello-world-playn.iml" />
       <module fileurl="file://$PROJECT_DIR$/assets/hello-world-playn-assets.iml" filepath="$PROJECT_DIR$/assets/hello-world-playn-assets.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/hello-world-playn-core.iml" filepath="$PROJECT_DIR$/core/hello-world-playn-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/html/hello-world-playn-html.iml" filepath="$PROJECT_DIR$/html/hello-world-playn-html.iml" />
       <module fileurl="file://$PROJECT_DIR$/java/hello-world-playn-java.iml" filepath="$PROJECT_DIR$/java/hello-world-playn-java.iml" />
     </modules>
   </component>
