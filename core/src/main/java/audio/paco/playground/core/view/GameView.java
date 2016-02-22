@@ -10,7 +10,9 @@ import playn.scene.GroupLayer;
 import playn.scene.ImageLayer;
 import react.RMap;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class GameView extends GroupLayer {
@@ -92,6 +94,16 @@ public class GameView extends GroupLayer {
         pieceView.setOrigin(Origin.CENTER);
         pieces.addAt(pieceView, board.cellLocation(at.x), board.cellLocation(at.y));
         return pieceView;
+    }
+
+    public void showPlays(List<Coordinate> coordinates, Piece color) {
+        final List<ImageLayer> plays = new ArrayList<>();
+        for (Coordinate coordinate : coordinates) {
+            ImageLayer pieceView = addPiece(color, coordinate);
+            pieceView.setAlpha(0.3f);
+            // TODO: Listen for click to make move
+            plays.add(pieceView);
+        }
     }
 
     @Override

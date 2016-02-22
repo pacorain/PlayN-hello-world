@@ -10,4 +10,8 @@ public enum Piece {
         this.fillColor = fillColor;
         this.strokeColor = strokeColor;
     }
+
+    public Piece next() {
+        return values()[ordinal() + 1 % values().length];
+    }
 }

@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/hello-world-playn.iml" filepath="$PROJECT_DIR$/hello-world-playn.iml" />
-      <module fileurl="file://$PROJECT_DIR$/android/hello-world-playn-android.iml" filepath="$PROJECT_DIR$/android/hello-world-playn-android.iml" />
       <module fileurl="file://$PROJECT_DIR$/assets/hello-world-playn-assets.iml" filepath="$PROJECT_DIR$/assets/hello-world-playn-assets.iml" />
       <module fileurl="file://$PROJECT_DIR$/core/hello-world-playn-core.iml" filepath="$PROJECT_DIR$/core/hello-world-playn-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/html/hello-world-playn-html.iml" filepath="$PROJECT_DIR$/html/hello-world-playn-html.iml" />
