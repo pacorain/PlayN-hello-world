@@ -8,6 +8,8 @@ import playn.core.Texture;
 import playn.core.Tile;
 import playn.scene.GroupLayer;
 import playn.scene.ImageLayer;
+import playn.scene.Mouse;
+import playn.scene.Pointer;
 import react.RMap;
 
 import java.util.ArrayList;
@@ -96,12 +98,25 @@ public class GameView extends GroupLayer {
         return pieceView;
     }
 
-    public void showPlays(List<Coordinate> coordinates, Piece color) {
+    public void showPlays(List<Coordinate> coordinates, final Piece color) {
         final List<ImageLayer> plays = new ArrayList<>();
-        for (Coordinate coordinate : coordinates) {
-            ImageLayer pieceView = addPiece(color, coordinate);
+        for (final Coordinate coordinate : coordinates) {
+            final ImageLayer pieceView = addPiece(color, coordinate);
             pieceView.setAlpha(0.3f);
-            // TODO: Listen for click to make move
+            pieceView.events().connect(new Pointer.Listener() {
+                @Override
+                public void onStart(Pointer.Interaction interaction) {
+                    for (ImageLayer play : plays) play.close();
+                    game.logic.applyPlay(game.pieces, color, coordinate);
+                    game.turn.update(color.next());
+                }
+            });
+            pieceView.events().connect(new Mouse.Listener() {
+                @Override
+                public void onHover(Mouse.HoverEvent event, Mouse.Interaction interaction) {
+                    pieceView.setAlpha(event.inside ? 0.6f : 0.3f);
+                }
+            });
             plays.add(pieceView);
         }
     }

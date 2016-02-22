@@ -12,6 +12,6 @@ public enum Piece {
     }
 
     public Piece next() {
-        return values()[ordinal() + 1 % values().length];
+        return values()[(ordinal() + 1) % values().length];
     }
 }

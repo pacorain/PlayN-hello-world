@@ -51,6 +51,31 @@ public class Logic {
         return plays;
     }
 
+    public void applyPlay(Map<Coordinate, Piece> board, Piece color, Coordinate coord) {
+        List<Coordinate> toFlip = new ArrayList<>();
+        // place this piece into the game state
+        board.put(coord, color);
+        // determine where this piece captures other pieces
+        for (int ii = 0; ii < DX.length; ii++) {
+            // look in this direction for captured pieces
+            int x = coord.x, y = coord.y;
+            for (int dd = 0; dd < PlayNGame.BOARD_SIZE; dd++) {
+                x += DX[ii];
+                y += DY[ii];
+                if (!inBounds(x, y)) break; // stop when we end up off the board
+                Coordinate fc = new Coordinate(x, y);
+                Piece piece = board.get(fc);
+                if (piece == null) break;
+                else if (piece != color) toFlip.add(fc);
+                else { // piece == color
+                    for (Coordinate tf : toFlip) board.put(tf, color); // flip it!
+                    break;
+                }
+            }
+            toFlip.clear();
+        }
+    }
+
     private boolean inBounds(int x, int y) {
         return (x >= 0) && (x < PlayNGame.BOARD_SIZE) && (y >= 0) && (y < PlayNGame.BOARD_SIZE);
     }
